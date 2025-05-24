@@ -3,14 +3,14 @@
 theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: ./cover.png
 # some information about your slides (markdown enabled)
 title: "Re-thinking Next.js: Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend"
 info: |
   ## ReactJS Barcelona Meetup
   Presentation by Danilo Velasquez
 
-  Heavily based on [this blog article]()
+  Based on [this blog article](https://d13z.dev/blog/07-why-kleinanzeigen-picked-astro-over-nextjs/)
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -32,11 +32,11 @@ mdc: true
   Staff Software Engineer @ Kleinanzeigen.de
 </div>
 
-<div class="absolute bottom-8 left-8">
+<div class="absolute bottom-8 left-8"> 
   ReactJS Barcelona Meetup
 </div>
 <div class="absolute bottom-8 right-8">
-  [Date of your Meetup]
+  June 10th, 2025
 </div>
 
 ---

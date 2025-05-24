@@ -1,0 +1,5 @@
+This repository is using Sli.dev to create a presentation slides.
+
+This engine is based on vite, vuejs and unocss for styling.
+
+The format of the slides is markdown with frontmatter on it.
