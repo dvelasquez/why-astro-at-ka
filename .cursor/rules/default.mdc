@@ -1,0 +1,54 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# .cursorrules for Sli.dev (Slidev) Presentation Project
+
+This repository uses [Sli.dev (Slidev)](https://sli.dev/guide/) to create presentation slides.
+
+## General Guidelines
+
+- **Primary Format:** Slides are written in Markdown (`.md`) with YAML frontmatter. Each slide is separated by `---`.
+- **Styling:** Use [UnoCSS](https://unocss.dev/) utility classes for styling. Prefer valid UnoCSS classes in all suggestions and completions.
+- **Themes:** The default `serif` theme is used. Theme-specific classes and features may be referenced.
+- **Components:** Vue components and HTML/JSX snippets may be embedded in Markdown. Future code may include custom Vue components.
+- **Configuration:** Project configuration is managed via `slidev.config.ts` and frontmatter in `slides.md`.
+
+## Slide Content Guidelines
+
+- **Frontmatter:** Use YAML frontmatter at the top of the file and for individual slides as needed.
+- **Slide Separation:** Use `---` to separate slides.
+- **Markdown:** Write content in standard Markdown. Use headings, lists, code blocks, images, and links as needed.
+- **Code Blocks:** Use fenced code blocks with language identifiers for syntax highlighting.
+- **Layouts:** Use Slidev built-in layouts via frontmatter or `layout:` blocks.
+- **Directives:** Use Slidev directives (e.g., `@click`, `@default`) as needed for interactivity.
+- **KaTeX/Mermaid:** Use KaTeX for math and Mermaid for diagrams as supported by Slidev.
+
+## Styling and Classes
+
+- **UnoCSS:** Use UnoCSS utility classes for all styling. Avoid non-standard or non-UnoCSS classes.
+- **Theme Classes:** Use theme-provided classes if needed for consistency with the serif theme.
+
+## Vue/JSX/HTML
+
+- **Embedded Components:** You may embed Vue/HTML/JSX directly in Markdown slides.
+- **Custom Components:** Future slides may use custom Vue components. Place them in a `components/` directory and import as needed.
+
+## Editor and Tooling
+
+- **VSCode Extension:** Use the Slidev VSCode extension for enhanced editing and preview.
+- **Cursor Suggestions:** If code suggestions are not working in `.md` files, ensure the file is recognized as Markdown and that the extension is active. Try reloading the window or restarting Cursor if issues persist.
+- **Completions:** Prefer completions that are valid in the context of Slidev Markdown, UnoCSS, and Vue.
+
+## Best Practices
+
+- **Keep slides concise and focused.**
+- **Use headings and lists for clarity.**
+- **Leverage Slidev features (layouts, transitions, directives) for better presentations.**
+- **Keep code DRY and modular, especially when using custom components.**
+- **Document any custom components or advanced features in a `README.md` or comments.**
+
+---
+
+For more, see the [Slidev Guide](https://sli.dev/guide/).
