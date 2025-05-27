@@ -74,6 +74,21 @@ src: ./pages/02.-who-is-ka.md
 src: ./pages/03.-the-challenge.md
 ---
 
+---
+src: ./pages/04.-the-search-for-a-modern-solution.md
+---
+
+---
+src: ./pages/05.-option-1-nextjs.md
+---
+
+---
+src: ./pages/06.-option-2-deno-fresh.md
+---
+
+---
+src: ./pages/07.-option-3-astro.md
+---
 
 ---
 layout: default
@@ -89,56 +104,6 @@ layout: default
     * Simple Demo App: Homepage, Search Results, Item Details.
     * Integrated a complex existing Preact widget (GDPR banner) to test compatibility.
 
----
-layout: two-cols
----
-
-# Option 1: Next.js
-
-<div class="prose">
-
-**The Familiar Choice**
-
-* **Pros:**
-    * Team familiarity (from previous unification project).
-    * Massive community, great React/Preact support.
-    * Flexible CSS solutions; GDPR banner integrated fine.
-* **Cons (Our "Taming the CI Beast" Learnings):**
-    * Painful upgrades (React 17&rarr;18, Next 13&rarr;14&rarr;15).
-    * Self-hosting felt like an **afterthought**; Vercel-centric model was costly & led to custom, brittle solutions.
-    * Performance battles: SSR &rarr; Hydration &rarr; Reconciliation issues, especially with 3rd party scripts messing with the DOM.
-    * RSCs: Seemed complex *at the time*, not a direct fix for our "send less JS" goal.
-    * Felt like a generalist framework, not optimized for our content-heavy, SEO-critical, mostly static needs.
-
-</div>
-
-::right::
-
-<img src="/2025-04-23/nextjs-logo.png" class="h-60" alt="Next.js Logo"/>
----
-layout: two-cols
----
-
-# Option 2: Deno / Fresh
-
-<div class="prose">
-
-**The Clean Slate**
-
-* **Pros:**
-    * Intriguing paradigm: Preact everywhere, SSR by default (good fit for our mostly static content).
-    * Demo successful, GDPR banner integrated, good DX.
-    * TailwindCSS support (a must for our new design system).
-* **Cons:**
-    * Significantly smaller community than Node.js.
-    * Fresh was very new; perceived maturity risk.
-    * Deno adoption would require extensive internal approval.
-
-</div>
-
-::right::
-
-<img src="/2025-04-23/fresh-logo.svg" class="h-60" alt="Deno/Fresh Logo"/>
 ---
 layout: two-cols
 ---
@@ -243,54 +208,13 @@ layout: two-cols
     * *"very easy to learn coming from react with next.js experience"*
     * *"Nice and modern."*
 
-::right::
-
-<BarChart
-  class="h-80"
-  :data="[
-    { name: 'Java (Non-Prod Deploy)', time: 15 },
-    { name: 'Java (Full Prod Release)', time: 60 },
-    { name: 'Astro (Lint/Unit)', time: 1.5 },
-    { name: 'Astro (E2E)', time: 2 },
-    { name: 'Astro (Build/Deploy)', time: 5 }
-  ]"
-  :categories="['time']"
-  :index="'name'"
-  title="CI/CD Time Comparison (Minutes)"
-/>
-
 ---
-layout: two-cols
+src: ./pages/11.-results-developer-experience-wins.md
 ---
 
-# Results: Performance & Widget Reuse
-
-* **Performance (Lighthouse - Homepage):**
-    * Old Java App: `~64/100`
-    * New Astro App (pre-optimization): `~69/100`
-    * Key: Less JS by default, clear path for further optimization.
-* **Widget Reuse (Existing Preact Microfrontends):**
-    * Generally straightforward: widgets need an HTML element to mount.
-    * Challenge: Multiple widgets potentially loading their own Preact versions (future optimization area).
-
-::right::
-
-<div class="grid grid-cols-2 gap-4">
-  <img src="/2025-04-23/ka-java-performance.png" class="rounded-lg shadow-lg" alt="Lighthouse Score Java App"/>
-  <img src="/2025-04-23/ka-astro-performance.png" class="rounded-lg shadow-lg" alt="Lighthouse Score Astro App"/>
-</div>
-
 ---
-layout: default
+src: ./pages/12.-results-performance-widget-reuse.md
 ---
-
-# Challenges & Learning Curves 🎢
-
-* **Learning Astro:** `.astro` syntax, `defineAction()`, distinguishing component types – initial confusion for some. Internal expertise was key.
-* **Testing:** `styled-jsx` + Preact + Vitest + `@testing-library/preact` was problematic, accelerating Tailwind adoption.
-* **Long-Term Maintenance:** Minor concerns about Astro concept longevity/breaking changes (Platform team to manage upgrades).
-* **Server Features:** Monitoring/logging less mature out-of-the-box, requiring custom setup.
-* **Multi-App Coordination:** Ongoing effort for platform team.
 
 ---
 layout: center
@@ -309,37 +233,29 @@ class: text-center
 Astro empowered us to tackle our Value Creation Plan with speed and confidence.
 
 ---
-layout: default
+src: ./pages/15.-when-might-astro-be-right-for-you.md
 ---
 
-# When Might Astro Be Right For *You*? 🤔
-
-<div class="grid grid-cols-2 gap-x-8 gap-y-4 prose">
-
-* Your site is **content-heavy** (static HTML focus).
-* Not a highly reactive, real-time application.
-* Need **fine-grained control** over UI interactivity (Island Architecture).
-* **Minimizing client-side JS** is a high priority.
-* Need excellent **self-hosting support**.
-* Value flexibility to **mix UI frameworks**.
-* Facing hydration/3rd party script performance issues.
-* You're tired of Next.js 😉
-
-</div>
-
 ---
-layout: center
-class: text-center
+src: ./pages/08.-why-astro-island-architecture.md
 ---
 
-# Thank You & Q&A
+---
+src: ./pages/09.-the-decision-and-rollout.md
+---
 
-**Danilo Velasquez**
-Staff Software Engineer @ Kleinanzeigen
+---
+src: ./pages/10.-implementation-multi-app-shared-components.md
+---
 
-[d13z.dev](https://d13z.dev) | [LinkedIn](https://www.linkedin.com/in/danilovelasquez/) | [GitHub](https://github.com/dvelasquez)
+---
+src: ./pages/13.-challenges-and-learning-curves.md
+---
 
-<div class="absolute bottom-8 right-8 flex items-center gap-3">
-  <img src="/reactjs_barcelona_logo.jpg" class="h-8" alt="ReactJS Barcelona Logo"/>
-  <img src="/logo-kleinanzeigen-horizontal.svg" class="h-8" alt="Kleinanzeigen Logo"/>
-</div>
+---
+src: ./pages/14.-conclusion-astro-right-tool.md
+---
+
+---
+src: ./pages/16.-thank-you-and-qa.md
+---
