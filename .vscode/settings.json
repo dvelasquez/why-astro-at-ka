@@ -1,0 +1,9 @@
+{
+  "slidev.preview-sync": true,
+  "recommendations": [
+    "antfu.unocss"
+  ],
+  "unocss.enable": true,
+  "unocss.root": "${workspaceFolder}",
+  "markdownlint.enable": false
+}

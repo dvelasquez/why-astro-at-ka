@@ -1,293 +1,345 @@
 ---
-# You can also start simply with 'default'
-theme: default
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: ./cover.png
-# some information about your slides (markdown enabled)
-title: "Re-thinking Next.js: Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend"
-info: |
-  ## ReactJS Barcelona Meetup
-  Presentation by Danilo Velasquez
-
-  Based on [this blog article](https://d13z.dev/blog/07-why-kleinanzeigen-picked-astro-over-nextjs/)
-# apply unocss classes to the current slide
-class: text-center
-# https://sli.dev/features/drawing
+# For personal use only
+theme: 'seriph'
+# aspect ratio for the slides
+aspectRatio: '16/9'
+# enable presenter mode, can be boolean, 'dev' or 'build'
+presenter: 'dev'
+# syntax highlighter, can be 'prism' or 'shiki'
+highlighter: 'shiki'
+# show line numbers in code blocks
+lineNumbers: false
+# enable slide recording, can be boolean, 'dev'
+record: 'dev'
+# allow 'click' animation globally
+clicks: true
+# draw slides with mouse
 drawings:
+  enabled: true
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
-mdc: true
-# open graph
-# seoMeta:
-#  ogImage: https://cover.sli.dev
+  presenterOnly: false
+  syncAll: true
+# default frontmatter applies to all slides
+defaults:
+  layout: 'default'
+# slide transition
+transition: fade
+# enable print mode, can be 'pdf' or 'html'
+print: false
+# information for the slides, available in all slides through $frontmatter
+info: |
+  ## Re-thinking Next.js: Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend
+  Danilo Velasquez
+  ReactJS Barcelona, June 10th, 2025
+# favicon, can be a local file path or URL
+favicon: '[https://d13z.dev/favicon.svg](https://d13z.dev/favicon.svg)'
+# controls whether texts in slides are selectable
+selectable: true
+# enable slide recording, can be boolean or 'dev'
 ---
 
-# Re-thinking Next.js: Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend
+<div class="slidev-layout cover flex flex-col justify-center items-center text-center h-full">
+  <div class="my-auto">
+    <h2>Re-thinking Next.js:</h2>
+    <h1 class="text-5xl font-bold">
+      Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend
+    </h1>
+    <p class="text-xl mt-4 opacity-75">
+      Real-world experiences from Germany's largest classifieds site.
+    </p>
+    <p class="text-1xl mt-8">
+      <strong>Danilo Velasquez</strong>
+      <br/>
+      <span class="opacity-75">Staff Software Engineer @ Kleinanzeigen</span>
+    </p>
+  </div>
 
-<div class="pt-12">
-  Danilo Velasquez <br/>
-  Staff Software Engineer @ Kleinanzeigen.de
+  <div class="absolute bottom-2 left-8 text-left">
+    <p class="text-md">ReactJS Barcelona</p>
+    <p class="text-sm opacity-75">June 10th, 2025</p>
+  </div>
+
+  <div class="absolute bottom-8 right-8 flex items-center gap-3">
+    <img src="/logo-kleinanzeigen-horizontal.svg" class="h-8" alt="Kleinanzeigen Logo"/>
+    <img src="/2025-04-23/astro-logo.png" class="h-8" alt="Astro Logo"/>
+    <img src="/reactjs_barcelona_logo.jpg" class="h-8" alt="ReactJS Barcelona Logo"/>
+  </div>
 </div>
 
-<div class="absolute bottom-8 left-8"> 
-  ReactJS Barcelona Meetup
-</div>
-<div class="absolute bottom-8 right-8">
-  June 10th, 2025
-</div>
-
 ---
-layout: two-cols-header
+src: ./pages/02.-who-is-ka.md
 ---
 
-## A Bit of History: Me & Kleinanzeigen
-
-::left::
-
-<br/> 
-
-### Danilo Velasquez
-* Web Platform Engineer @ Kleinanzeigen.de
-* 14 years experience
-* #UseThePlatform
-* `d13z.dev`
-
-::right::
-
-![Kleinanzeigen Evolution](https://placehold.co/600x400?text=Kleinanzeigen:+15+Years+Growth) 
-### Kleinanzeigen.de, top 1 classifieds DE
-* **~15 Years** Strong
-* Startup Roots ➡️ PE Ownership
-* Mandate: **GROW!** 🚀
-
-<!--
-asd
--->
-
 ---
-layout: center 
+src: ./pages/03.-the-challenge.md
 ---
 
-## The Challenge: A Platform in "Adolescence"
-
-![Platform Adolescence](https://placehold.co/700x500?text=Startup+-->+Adolescence+<--+Enterprise)
 
 ---
-layout: two-cols 
+layout: default
 ---
+# The Search for a Modern Solution 🚀
 
-### The "Heritage" Core
-![Java Monolith](https://placehold.co/500x350?text=Java+Monolith+|+jQuery/JSP+Frontend)
-* Java Springboot
-* JSP/Moustache
-* jQuery/Vanilla JS
-
-::right::
-
-### ...Emerging Cracks
-![Hybrid System](https://placehold.co/500x350?text=Monolith+PLUS+~50+MFEs)
-* **~50** Preact/TS Widgets
-* Tactical Fixes ➡️ Complexity
-
----
-layout: two-cols-header
----
-
-## The Monolith's Grip: Mounting Pressures
-
-::left::
-
-### Developer 😩
-![Developer Pain Visual](https://placehold.co/500x350?text=Developer+Frustration)
-* Local Setup "Quicksand"
-* Glacial Dev Cycles
-* The "Haunted Forest"
-
-::right::
-
-### Business 📉
-![Business Pain Visual](https://placehold.co/500x350?text=Business+Bottleneck)
-* Time-to-Market Crisis
-* Stagnation & Tech Debt
-* Speed vs. Stability Tension
-
----
----
-
-## A Different Beast: The Next.js Unification Saga (Cancelled)
-
-![Complex Project Visual](https://placehold.co/700x400?text=The+MASSIVE+Next.js+Project)
-
-* Goal: Unify multiple marketplaces ➡️ **One GIGANTIC Next.js app**
-* ~1.5 years of hands-on experience
-* Key Lesson: **Scaling Self-Hosted Next.js is HARD**
-
----
-layout: center
----
-
-## The Crossroads: Time for a New Path
-
-![Decision Point](https://placehold.co/600x400?text=New+Strategy+Needed!)
-
-* **Mandate:** Modernize core for GROWTH
-* **Constraints:**
-    * Leverage React/Preact & TypeScript
-    * Improve DX & Performance
-    * **Critical: Self-Host at Scale**
-
----
----
-
-## Re-Evaluating Next.js: A Sober Look
-
-![Next.js Scrutiny](https://placehold.co/600x400?text=Next.js+Under+the+Microscope)
-
-* **Pros:** Familiarity, Ecosystem, React ❤️
-* **Cons (for *Kleinanzeigen's* scale & needs):**
-    * Self-Hosting Friction (Vercel-first an issue)
-    * Perf. with 3rd Parties (Hydration/Reconciliation complexity)
-    * RSCs: A workaround for *our* minimal JS goal?
-    * "Monolith PTSD" from Unification Project
+* **Goal:** Evolve the *entire* platform, especially core pages, with modern tools.
+* **Key Requirements:**
+    * Leverage existing team skills: **React/Preact & TypeScript**.
+    * Improve Developer Experience (DX) & Performance.
+    * Excellent **self-hosting** support (critical for our scale).
+* **Evaluation Process:**
+    * Simple Demo App: Homepage, Search Results, Item Details.
+    * Integrated a complex existing Preact widget (GDPR banner) to test compatibility.
 
 ---
 layout: two-cols
 ---
 
-::left::
+# Option 1: Next.js
 
-### Deno / Fresh
-![Deno/Fresh Logo](https://placehold.co/400x300?text=Deno+|+Fresh)
-* **Pros:** Modern, Preact ❤️, SSR Default
-* **Cons:** Smaller Community, Newness, Internal Approval Hurdles
+<div class="prose">
+
+**The Familiar Choice**
+
+* **Pros:**
+    * Team familiarity (from previous unification project).
+    * Massive community, great React/Preact support.
+    * Flexible CSS solutions; GDPR banner integrated fine.
+* **Cons (Our "Taming the CI Beast" Learnings):**
+    * Painful upgrades (React 17&rarr;18, Next 13&rarr;14&rarr;15).
+    * Self-hosting felt like an **afterthought**; Vercel-centric model was costly & led to custom, brittle solutions.
+    * Performance battles: SSR &rarr; Hydration &rarr; Reconciliation issues, especially with 3rd party scripts messing with the DOM.
+    * RSCs: Seemed complex *at the time*, not a direct fix for our "send less JS" goal.
+    * Felt like a generalist framework, not optimized for our content-heavy, SEO-critical, mostly static needs.
+
+</div>
+
+::right::
+
+<img src="/2025-04-23/nextjs-logo.png" class="h-60" alt="Next.js Logo"/>
+---
+layout: two-cols
+---
+
+# Option 2: Deno / Fresh
+
+<div class="prose">
+
+**The Clean Slate**
+
+* **Pros:**
+    * Intriguing paradigm: Preact everywhere, SSR by default (good fit for our mostly static content).
+    * Demo successful, GDPR banner integrated, good DX.
+    * TailwindCSS support (a must for our new design system).
+* **Cons:**
+    * Significantly smaller community than Node.js.
+    * Fresh was very new; perceived maturity risk.
+    * Deno adoption would require extensive internal approval.
+
+</div>
 
 ::right::
 
-### Astro Emerges
-![Astro Logo/Concept](https://placehold.co/400x300?text=Astro+ 등장!) 
-* Minimal JS by Default
-* UI Agnostic (Preact!)
-* **Island Architecture!** 🏝️
-
+<img src="/2025-04-23/fresh-logo.svg" class="h-60" alt="Deno/Fresh Logo"/>
 ---
-layout: center
+layout: two-cols
 ---
 
-## The "Aha!" Moment: Island Architecture 🏝️
+# Option 3: Astro
 
-![Island Architecture Diagram](https://placehold.co/700x500?text=Static+HTML+Ocean+|+Interactive+JS+Islands)
-* **Our Pages:** ~80% Static Content / ~20% Interactive Widgets
-* **Astro Default:** Send HTML. JS is Opt-In for "Islands".
-* **Benefit:** Solves 3rd Party Script vs. Hydration Battles!
+<div class="prose">
 
----
----
+**The Challenger**
 
-## From Theory to Reality: PoC & The Green Light
+* **Pros:**
+    * 🏝️ **Island Architecture:** Send HTML by default, hydrate only specific components (`<client:load>`, etc.). Directly addressed Next.js hydration/3rd party script issues. **Less JS = Faster Loads!**
+    * 🧩 **UI Framework Agnostic:** React, Preact, Vue, Solid, Svelte - flexibility for the future.
+    * Mature & **Self-Hosting First:** Vibrant community, stable, first-class Node.js self-hosting support.
+    * Demo successful, GDPR banner integrated.
+* **Cons/Considerations:**
+    * Steeper learning curve: `.astro` syntax, frontmatter.
+    * New Tooling: Vite & Vitest (team mostly knew Webpack & Jest).
+    * `styled-jsx` SSR limitation: Existing widgets would render client-side until migrated to TailwindCSS.
 
-![Team Decision & PoC](https://placehold.co/700x400?text=PoC+Success+|+CoP+Approval)
-
-* **PoC:** Homepage, Search, Detail pages + GDPR Preact Widget
-* **Process:** ADR / RFC ➡️ CoP Feedback (4 weeks)
-* **Rollout:** Homepage 1% ➡️ 10% ➡️ 40% ➡️ **100% Live!**
-
----
-layout: two-cols-header # Or similar
----
-
-## Our Astro Blueprint: Key Decisions
-
-::left::
-![Multi-App Diagram](https://placehold.co/500x350?text=Domain-Specific+Astro+Apps)
-* **No More Monoliths!**
-    * Multiple Astro Apps per Domain
-    * Team Autonomy & Independent Releases
+</div>
 
 ::right::
-![Shared Libs & SSR](https://placehold.co/500x350?text=Shared+Libs+|+SSR+|+Preact+|+Tailwind)
-* **Shared Libraries** (Monorepo)
-* **SSR** (Node.js Adapter)
-* **Preact** & **TailwindCSS**
+
+<img src="/2025-04-23/astro-logo.png" class="h-60" alt="Astro Logo"/>
 
 ---
+layout: default
 ---
 
-## Early Wins: Developer Velocity & Happiness 🚀
+# Why Astro? The Island Architecture Advantage 🏝️
 
-![Dev Velocity](https://placehold.co/700x400?text=Happy+Developers+|+Fast+CI/CD)
+**Shipping HTML First, JavaScript Second (Only When Needed!)**
 
-* **Onboarding:** Days ➡️ **<15 Minutes!**
-* **CI/CD:**
-    * Java Full Release: **>1 Hour**
-    * Astro Full Release: **~7-10 Minutes Total!**
-    * (Lint/Unit: ~1.5m, E2E: ~2m, Build/Deploy: ~5m)
-* **Dev Quotes:** *"Smooth & easy"*, *"Great docs"*, *"Modern"*
+* **The Next.js Hydration Problem (for us):**
+    1.  Server renders full React page.
+    2.  Client renders HTML.
+    3.  *3rd party scripts run, modify HTML.*
+    4.  Full React JS bundle downloads & runs.
+    5.  React compares its VDOM to (now modified) browser DOM &rarr; **Reconciliation pain, repaints.**
+    6.  More 3rd party scripts run...
+    * Result: Multiple re-renders, potential race conditions, poor Core Web Vitals.
+* **Astro's Approach:**
+    1.  Server renders HTML.
+    2.  Client renders HTML (mostly static).
+    3.  *Only* JS for explicit `<client:*> ` components is sent and hydrated.
+    * Result: **Less JS, faster loads, smaller interactive islands, fewer conflicts.**
+
+<img src="/2025-04-23/islands-architecture.png" class="mt-4 rounded-lg shadow-md" alt="Islands Architecture Diagram"/>
+
+---
+layout: default
+---
+
+# The Decision & Rollout ✅
+
+* **Process:**
+    * Platform team: Demos & evaluations.
+    * Architectural Decision Record (ADR) + RFC (4 weeks) for Community of Practice (CoP) feedback.
+    * **Astro Chosen!**
+* **Buy-in & Proof of Concept (PoC):**
+    * Workshops to introduce Astro to engineers.
+    * Partnered with Homepage team to rebuild it in Astro.
+    * Gradual rollout: **1% &rarr; 10% &rarr; 40% &rarr; 100%** traffic.
+
+---
+layout: default
+---
+
+# Implementation: Multi-App & Shared Components 🏗️
+
+* **Key Decision: NO single giant Astro app!**
+    * Separate Astro apps per business domain (Homepage, Search, Item Details etc.).
+    * **Benefit:** Team autonomy, independent releases.
+    * **Challenge:** More responsibility for Platform team (tooling, consistency).
+* **Shared Libraries:**
+    * Header, footer, etc., as versioned packages in a Monorepo:
+        * Lerna-Lite, Turborepo, npm workspaces.
+    * RenovateBot for automated dependency updates.
+* **Tech Choices:**
+    * **SSR** with Node.js adapter (SSG impractical for 50M+ ads).
+    * **Preact** as primary UI framework (team experience, smaller bundles).
+    * **TailwindCSS** adopted fully (new design system, styled-jsx issues).
+
+<img src="/2025-04-23/diagram-architectures.jpg" class="h-48 mt-4 rounded-lg shadow-md" alt="Monolith vs Multi-App Architecture"/>
 
 ---
 layout: two-cols
 ---
 
-::left::
+# Results: Developer Experience Wins! 🎉
 
-### Web Performance  lighthouse
-![Performance Graph](https://placehold.co/500x350?text=Lighthouse:+Java+64+->+Astro+69)
-* Java CWV: Mostly Green (LCP ~2.3s)
-* Astro CWV: **Maintained!** (LCP ~2.0s)
-* *Room for Astro-specific optimization!*
+* **Onboarding:** `<15 minutes` for new Astro Homepage vs. `days` for Java monolith.
+* **CI/CD Drastically Faster:**
+    * Linting & Unit Tests: `~1.5 minutes`
+    * E2E Tests: `~2 minutes`
+    * Build & Deploy: `~5 minutes`
+    * (vs. Java: 15 min non-prod deploy, >1 hour full prod release).
+* **Developer Quotes:**
+    * *"Very smooth and easy to use."*
+    * *"Great! It is easy to install and run, documentation is also very good."*
+    * *"very easy to learn coming from react with next.js experience"*
+    * *"Nice and modern."*
 
 ::right::
 
-### Widget Reuse ✅
-![Widget Integration](https://placehold.co/500x350?text=Preact+Widgets+in+Astro)
-* Existing Preact widgets integrated easily.
-* *Challenge:* Managing multiple Preact versions.
+<BarChart
+  class="h-80"
+  :data="[
+    { name: 'Java (Non-Prod Deploy)', time: 15 },
+    { name: 'Java (Full Prod Release)', time: 60 },
+    { name: 'Astro (Lint/Unit)', time: 1.5 },
+    { name: 'Astro (E2E)', time: 2 },
+    { name: 'Astro (Build/Deploy)', time: 5 }
+  ]"
+  :categories="['time']"
+  :index="'name'"
+  title="CI/CD Time Comparison (Minutes)"
+/>
 
 ---
+layout: two-cols
 ---
 
-## The Learning Curve & Ongoing Challenges 🤔
+# Results: Performance & Widget Reuse
 
-![Challenges Ahead](https://placehold.co/700x400?text=Learning+|+Testing+|+Coordination)
+* **Performance (Lighthouse - Homepage):**
+    * Old Java App: `~64/100`
+    * New Astro App (pre-optimization): `~69/100`
+    * Key: Less JS by default, clear path for further optimization.
+* **Widget Reuse (Existing Preact Microfrontends):**
+    * Generally straightforward: widgets need an HTML element to mount.
+    * Challenge: Multiple widgets potentially loading their own Preact versions (future optimization area).
 
-* **Astro Onboarding:** `.astro` syntax, `defineAction()` (for some)
-* **Tooling Shift:** Vite/Vitest vs Webpack/Jest
-* **Data Fetching:** New APIs for decoupled frontend
-* **Testing Preact + styled-jsx + Vitest:** Tricky! (Accelerated Tailwind move)
-* **Multi-App Coordination:** Platform team vigilance needed!
-* **Server Features:** Maturing (Logging, Monitoring)
+::right::
+
+<div class="grid grid-cols-2 gap-4">
+  <img src="/2025-04-23/ka-java-performance.png" class="rounded-lg shadow-lg" alt="Lighthouse Score Java App"/>
+  <img src="/2025-04-23/ka-astro-performance.png" class="rounded-lg shadow-lg" alt="Lighthouse Score Astro App"/>
+</div>
+
+---
+layout: default
+---
+
+# Challenges & Learning Curves 🎢
+
+* **Learning Astro:** `.astro` syntax, `defineAction()`, distinguishing component types – initial confusion for some. Internal expertise was key.
+* **Testing:** `styled-jsx` + Preact + Vitest + `@testing-library/preact` was problematic, accelerating Tailwind adoption.
+* **Long-Term Maintenance:** Minor concerns about Astro concept longevity/breaking changes (Platform team to manage upgrades).
+* **Server Features:** Monitoring/logging less mature out-of-the-box, requiring custom setup.
+* **Multi-App Coordination:** Ongoing effort for platform team.
 
 ---
 layout: center
+class: text-center
 ---
 
-## Key Takeaways for React Developers 💡
+# Conclusion: Astro - The Right Tool for *Our* Job
 
-![React Takeaways](https://placehold.co/700x500?text=Lessons+for+the+React+Ecosystem)
+<img src="/2025-04-23/conclusion-astro-logo.png" class="h-40 mx-auto my-6" alt="Astro Logo with Text Conclusion"/>
+**Why Astro over Next.js for Kleinanzeigen?**
 
-* **Next.js isn't *always* the default.** (Context matters!)
-* Consider **Island-like patterns** for less JS.
-* **Preact:** Still a great lightweight choice.
-* **DX & CI/CD Speed:** Huge impact on velocity!
+* 🏝️ **Island Architecture** was a perfect fit for our content-heavy, SEO-critical pages.
+* ⚡ Directly addressed performance bottlenecks (hydration, 3rd party scripts).
+* 🛠️ Improved DX, faster CI/CD, framework flexibility, strong self-hosting.
+
+Astro empowered us to tackle our Value Creation Plan with speed and confidence.
+
+---
+layout: default
+---
+
+# When Might Astro Be Right For *You*? 🤔
+
+<div class="grid grid-cols-2 gap-x-8 gap-y-4 prose">
+
+* Your site is **content-heavy** (static HTML focus).
+* Not a highly reactive, real-time application.
+* Need **fine-grained control** over UI interactivity (Island Architecture).
+* **Minimizing client-side JS** is a high priority.
+* Need excellent **self-hosting support**.
+* Value flexibility to **mix UI frameworks**.
+* Facing hydration/3rd party script performance issues.
+* You're tired of Next.js 😉
+
+</div>
 
 ---
 layout: center
+class: text-center
 ---
 
-## Conclusion & Q&A
+# Thank You & Q&A
 
-![Conclusion Graphic](https://placehold.co/600x400?text=Astro+@+Kleinanzeigen:+The+Right+Fit)
+**Danilo Velasquez**
+Staff Software Engineer @ Kleinanzeigen
 
-* **Astro: Right choice *for Kleinanzeigen's* needs.**
-    * Solved specific scale, perf, & self-hosting issues.
-* Empowered Teams, Faster Delivery ➡️ Value Creation
-* The Journey Continues!
+[d13z.dev](https://d13z.dev) | [LinkedIn](https://www.linkedin.com/in/danilovelasquez/) | [GitHub](https://github.com/dvelasquez)
 
-**Blog Post:** `d13z.dev/blog/07-why-kleinanzeigen-picked-astro-over-nextjs`
-**Questions?**
-
-<div class="abs-bl m-6">
-  <carbon-logo-github class="inline-block"/> dvelasquez 
+<div class="absolute bottom-8 right-8 flex items-center gap-3">
+  <img src="/reactjs_barcelona_logo.jpg" class="h-8" alt="ReactJS Barcelona Logo"/>
+  <img src="/logo-kleinanzeigen-horizontal.svg" class="h-8" alt="Kleinanzeigen Logo"/>
 </div>
