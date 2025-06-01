@@ -38,16 +38,17 @@ selectable: true
 # enable slide recording, can be boolean or 'dev'
 ---
 
-<div class="slidev-layout cover flex flex-col justify-center items-center text-center h-full">
-  <div class="my-auto">
-    <h2>Re-thinking Next.js:</h2>
-    <h1 class="text-5xl font-bold">
-      Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend
+<div class="slidev-layout cover flex flex-col justify-center items-center text-center h-full p-8">
+  <div class="my-auto max-w-3xl mx-auto">
+    <h2 class="text-2xl mb-2">Re-thinking Next.js:</h2>
+    <h1 class="text-4xl font-bold leading-tight mb-6">
+      Why We Picked Astro for<br/>
+      Kleinanzeigen's High-Traffic Frontend
     </h1>
-    <p class="text-xl mt-4 opacity-75">
+    <p class="text-xl mt-4 opacity-75 mb-8">
       Real-world experiences from Germany's largest classifieds site.
     </p>
-    <p class="text-1xl mt-8">
+    <p class="text-lg mt-8">
       <strong>Danilo Velasquez</strong>
       <br/>
       <span class="opacity-75">Staff Software Engineer @ Kleinanzeigen</span>
