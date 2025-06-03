@@ -1,0 +1,18 @@
+/* Global typography overrides for all slides */
+.slidev-content h1 {
+  --at-apply: text-2xl font-bold mb-4;
+}
+.slidev-content h2 {
+  --at-apply: text-xl font-semibold mb-3;
+}
+.slidev-content h3 {
+  --at-apply: text-lg font-semibold mb-2;
+}
+.slidev-content p,
+.slidev-content ul,
+.slidev-content ol {
+  --at-apply: text-base;
+}
+.slidev-content li {
+  --at-apply: mb-1;
+} 

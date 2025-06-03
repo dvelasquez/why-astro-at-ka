@@ -1,6 +1,6 @@
 ---
 # For personal use only
-theme: 'seriph'
+theme: 'default'
 # aspect ratio for the slides
 aspectRatio: '16/9'
 # enable presenter mode, can be boolean, 'dev' or 'build'
@@ -126,3 +126,4 @@ src: ./pages/15.-when-might-astro-be-right-for-you.md
 ---
 src: ./pages/16.-thank-you-and-qa.md
 ---
+

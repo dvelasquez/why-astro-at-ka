@@ -5,13 +5,13 @@ alwaysApply: true
 ---
 # .cursorrules for Sli.dev (Slidev) Presentation Project
 
-This repository uses [Sli.dev (Slidev)](https://sli.dev/guide/) to create presentation slides.
+This repository uses [Sli.dev (Slidev)](mdc:https:/sli.dev/guide) to create presentation slides.
 
 ## General Guidelines
 
 - **Primary Format:** Slides are written in Markdown (`.md`) with YAML frontmatter. Each slide is separated by `---`.
-- **Styling:** Use [UnoCSS](https://unocss.dev/) utility classes for styling. Prefer valid UnoCSS classes in all suggestions and completions.
-- **Themes:** The default `serif` theme is used. Theme-specific classes and features may be referenced.
+- **Styling:** Use [UnoCSS](mdc:https:/unocss.dev) utility classes for styling. Prefer valid UnoCSS classes in all suggestions and completions.
+- **Themes:** The default theme is used. Theme-specific classes and features may be referenced.
 - **Components:** Vue components and HTML/JSX snippets may be embedded in Markdown. Future code may include custom Vue components.
 - **Configuration:** Project configuration is managed via `slidev.config.ts` and frontmatter in `slides.md`.
 
@@ -28,7 +28,7 @@ This repository uses [Sli.dev (Slidev)](https://sli.dev/guide/) to create presen
 ## Styling and Classes
 
 - **UnoCSS:** Use UnoCSS utility classes for all styling. Avoid non-standard or non-UnoCSS classes.
-- **Theme Classes:** Use theme-provided classes if needed for consistency with the serif theme.
+- **Theme Classes:** Use theme-provided classes if needed for consistency with the default theme.
 
 ## Vue/JSX/HTML
 
@@ -40,6 +40,8 @@ This repository uses [Sli.dev (Slidev)](https://sli.dev/guide/) to create presen
 - **VSCode Extension:** Use the Slidev VSCode extension for enhanced editing and preview.
 - **Cursor Suggestions:** If code suggestions are not working in `.md` files, ensure the file is recognized as Markdown and that the extension is active. Try reloading the window or restarting Cursor if issues persist.
 - **Completions:** Prefer completions that are valid in the context of Slidev Markdown, UnoCSS, and Vue.
+- **Use the playwright MCP server to check the slides at any given time**
+- **Local development** server is available at http://localhost:3030
 
 ## Best Practices
 
@@ -48,7 +50,8 @@ This repository uses [Sli.dev (Slidev)](https://sli.dev/guide/) to create presen
 - **Leverage Slidev features (layouts, transitions, directives) for better presentations.**
 - **Keep code DRY and modular, especially when using custom components.**
 - **Document any custom components or advanced features in a `README.md` or comments.**
+- **Prefer to use the import slide feature than adding everything to the root slides.md**
 
 ---
 
-For more, see the [Slidev Guide](https://sli.dev/guide/).
+For more, see the [Slidev Guide](mdc:https:/sli.dev/guide).
