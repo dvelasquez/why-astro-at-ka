@@ -78,7 +78,7 @@ const rootStyle = computed(() => {
 
 <template>
   <div
-    class="flex items-start justify-start box-border overflow-hidden relative"
+    class="flex items-center justify-center box-border overflow-hidden relative"
     :style="rootStyle"
   >
     <img
