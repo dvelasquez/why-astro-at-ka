@@ -24,11 +24,22 @@ interface Props {
 const props = defineProps<Props>()
 
 const current = ref(0)
+const previous = ref(0)
+const isFading = ref(false)
 let timer: number | undefined
+
+function nextImage() {
+  previous.value = current.value
+  current.value = (current.value + 1) % props.images.length
+  isFading.value = true
+  setTimeout(() => {
+    isFading.value = false
+  }, 600) // match transition duration
+}
 
 onMounted(() => {
   timer = window.setInterval(() => {
-    current.value = (current.value + 1) % props.images.length
+    nextImage()
   }, props.interval ?? 3000)
 })
 
@@ -67,13 +78,23 @@ const rootStyle = computed(() => {
 
 <template>
   <div
-    class="flex items-start justify-start box-border overflow-hidden"
+    class="flex items-start justify-start box-border overflow-hidden relative"
     :style="rootStyle"
   >
     <img
+      v-if="isFading"
+      :src="props.images[previous]"
+      :class="['rounded shadow-lg transition-all duration-500 absolute inset-0 w-full max-h-full', fitClass, alignClass, 'opacity-100 z-10']"
+      alt="carousel image previous"
+      style="transition: opacity 0.6s; opacity: 1;"
+      :style="{ opacity: isFading ? 1 : 0, zIndex: 10 }"
+    />
+    <img
       :src="props.images[current]"
-      :class="['rounded shadow-lg transition-all duration-500', fitClass, alignClass, 'w-full max-h-full']"
+      :class="['rounded shadow-lg transition-all duration-500 absolute inset-0 w-full max-h-full', fitClass, alignClass, isFading ? 'opacity-0 z-0' : 'opacity-100 z-10']"
       alt="carousel image"
+      style="transition: opacity 0.6s;"
+      :style="{ opacity: isFading ? 0 : 1, zIndex: isFading ? 0 : 10 }"
     />
   </div>
 </template> 
