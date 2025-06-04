@@ -96,7 +96,7 @@ src: ./pages/08.-why-astro-island-architecture.md
 ---
 
 ---
-src: ./pages/09.nextjs-rendering.md
+src: ./pages/09.-the-rendering-problem.md
 ---
 
 ---
