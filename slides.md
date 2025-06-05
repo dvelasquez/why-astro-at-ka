@@ -104,31 +104,35 @@ src: ./pages/10.-the-decision-and-rollout.md
 ---
 
 ---
-src: ./pages/11.-implementation-multi-app-shared-components.md
+src: ./pages/11.-java-monolith-status-quo.md
 ---
 
 ---
-src: ./pages/12.-results-developer-experience-wins.md
+src: ./pages/12.-the-new-approach.md
 ---
 
 ---
-src: ./pages/13.-results-performance-widget-reuse.md
+src: ./pages/13.-results-developer-experience-wins.md
 ---
 
 ---
-src: ./pages/14.-challenges-and-learning-curves.md
+src: ./pages/14.-results-performance-widget-reuse.md
 ---
 
 ---
-src: ./pages/15.-conclusion-astro-right-tool.md
+src: ./pages/15.-challenges-and-learning-curves.md
 ---
 
 ---
-src: ./pages/16.-when-might-astro-be-right-for-you.md
+src: ./pages/16.-conclusion-astro-right-tool.md
 ---
 
 ---
-src: ./pages/17.-thank-you-and-qa.md
+src: ./pages/17.-when-might-astro-be-right-for-you.md
+---
+
+---
+src: ./pages/18.-thank-you-and-qa.md
 ---
 
 ---
