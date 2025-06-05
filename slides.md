@@ -68,71 +68,71 @@ selectable: true
 </div>
 
 ---
-src: ./pages/02.-who-is-ka.md
+src: ./pages/02.md
 ---
 
 ---
-src: ./pages/03.-the-challenge.md
+src: ./pages/03.md
 ---
 
 ---
-src: ./pages/04.-the-search-for-a-modern-solution.md
+src: ./pages/04.md
 ---
 
 ---
-src: ./pages/05.-option-1-nextjs.md
+src: ./pages/05.md
 ---
 
 ---
-src: ./pages/06.-option-2-deno-fresh.md
+src: ./pages/06.md
 ---
 
 ---
-src: ./pages/07.-option-3-astro.md
+src: ./pages/07.md
 ---
 
 ---
-src: ./pages/08.-why-astro-island-architecture.md
+src: ./pages/08.md
 ---
 
 ---
-src: ./pages/09.-the-rendering-problem.md
+src: ./pages/09.md
 ---
 
 ---
-src: ./pages/10.-the-decision-and-rollout.md
+src: ./pages/10.md
 ---
 
 ---
-src: ./pages/11.-java-monolith-status-quo.md
+src: ./pages/11.md
 ---
 
 ---
-src: ./pages/12.-the-new-approach.md
+src: ./pages/12.md
 ---
 
 ---
-src: ./pages/13.-results-developer-experience-wins.md
+src: ./pages/13.md
 ---
 
 ---
-src: ./pages/14.-results-performance-widget-reuse.md
+src: ./pages/14.md
 ---
 
 ---
-src: ./pages/15.-challenges-and-learning-curves.md
+src: ./pages/15.md
 ---
 
 ---
-src: ./pages/16.-conclusion-astro-right-tool.md
+src: ./pages/16.md
 ---
 
 ---
-src: ./pages/17.-when-might-astro-be-right-for-you.md
+src: ./pages/17.md
 ---
 
 ---
-src: ./pages/18.-thank-you-and-qa.md
+src: ./pages/18.md
 ---
 
 ---
