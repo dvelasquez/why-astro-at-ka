@@ -16,3 +16,11 @@
 .slidev-content li {
   --at-apply: mb-1;
 } 
+
+.slidev-vclick-target {
+  transition: all 500ms ease;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+}
