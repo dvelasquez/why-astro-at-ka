@@ -67,6 +67,8 @@ selectable: true
   </div>
 </div>
 
+<!-- On this slide focus on presenting yourself, next slide is about Kleinanzeigen -->
+
 ---
 src: ./pages/02.md
 ---
