@@ -137,7 +137,3 @@ src: ./pages/17.md
 src: ./pages/18.md
 ---
 
----
-src: ./pages/99.-animation-demo.md
----
-
