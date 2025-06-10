@@ -4,7 +4,7 @@ theme: 'default'
 # aspect ratio for the slides
 aspectRatio: '16/9'
 # enable presenter mode, can be boolean, 'dev' or 'build'
-presenter: 'dev'
+# presenter: 'dev'
 # syntax highlighter, can be 'prism' or 'shiki'
 highlighter: 'shiki'
 # show line numbers in code blocks
