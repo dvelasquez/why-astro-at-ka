@@ -25,7 +25,7 @@ defaults:
 # slide transition
 transition: fade
 # enable print mode, can be 'pdf' or 'html'
-print: false
+print: true
 # information for the slides, available in all slides through $frontmatter
 info: |
   ## Re-thinking Next.js: Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend
@@ -35,8 +35,21 @@ info: |
 favicon: '[https://d13z.dev/favicon.svg](https://d13z.dev/favicon.svg)'
 # controls whether texts in slides are selectable
 selectable: true
-
-# enable slide recording, can be boolean or 'dev'
+title: "Re-thinking Next.js: Why We Picked Astro for Kleinanzeigen's High-Traffic Frontend"
+author: "Danilo Velasquez <i@d13z.dev>"
+date: "2025-06-10"
+download: true
+seoMeta:
+  ogTitle: Why we picked Astro instead of Next.js at kleinanzeigen.de
+  ogDescription: A deep dive into our decision to pick Astro instead of Next.js for our high-traffic frontend.
+  ogImage: https://why-astro-at-ka.d13z.dev/cover.png
+  ogUrl: https://why-astro-at-ka.d13z.dev
+  twitterCard: summary_large_image
+  twitterTitle: Why kleinanzeigen.de Germany largest classifieds site picked Astro instead of Next.js
+  twitterDescription: A deep dive into our decision to pick Astro instead of Next.js for our high-traffic frontend.
+  twitterImage: https://why-astro-at-ka.d13z.dev/cover.png
+  twitterSite: d13z.dev
+  twitterUrl: https://why-astro-at-ka.d13z.dev
 ---
 
 <div class="slidev-layout cover flex flex-col justify-center items-center text-center h-full p-8">
