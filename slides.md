@@ -35,6 +35,7 @@ info: |
 favicon: '[https://d13z.dev/favicon.svg](https://d13z.dev/favicon.svg)'
 # controls whether texts in slides are selectable
 selectable: true
+
 # enable slide recording, can be boolean or 'dev'
 ---
 
@@ -67,7 +68,11 @@ selectable: true
   </div>
 </div>
 
-<!-- On this slide focus on presenting yourself, next slide is about Kleinanzeigen -->
+<!--
+- Welcome everyone. My name is Danilo Velasquez, and I'm a Staff Software Engineer at Kleinanzeigen.
+- Today, I want to share a real-world story with you. It’s a story about challenges, big decisions, and how we re-thought our approach to frontend architecture for one of Germany’s highest-traffic websites.
+- This isn't just about choosing a framework; it's about fitting the technology to the problem, especially at scale.
+-->
 
 ---
 src: ./pages/02.md
@@ -136,4 +141,3 @@ src: ./pages/17.md
 ---
 src: ./pages/18.md
 ---
-
